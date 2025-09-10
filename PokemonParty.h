@@ -10,6 +10,11 @@
 
 class PokemonParty: public PokemonVector
 {
+private:
+public:
+    PokemonParty();
+    void addPokemonToParty(Pokemon pokemon);
+    void removePokemonFromParty(Pokemon pokemon);
 };
 
 

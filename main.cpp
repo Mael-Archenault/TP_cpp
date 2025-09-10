@@ -1,15 +1,18 @@
 
 
 #include "Pokedex.h"
-
+#include "PokemonParty.h"
 
 
 int main(){
-    Pokedex* test = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
-    Pokedex* test2 = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
-    std::cout<<(test == test2)<<std::endl;
+    Pokedex* pokedex = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
+    Pokemon poke1 = pokedex->getCloneById(45);
+    Pokemon poke2 = pokedex->getCloneById(60);
+    PokemonParty party;
+    party.addPokemonToParty(poke1);
+    party.addPokemonToParty(poke2);
 
-    test->displayByName();
+    party.removePokemonFromParty(poke1);
 
 }
 

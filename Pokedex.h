@@ -14,8 +14,6 @@ public:
     static Pokedex* getInstance(const std::string& nomFichier);
     Pokemon getCloneById(int id);
     Pokemon getCloneByName(const std::string name);
-    ~Pokedex();
-
 };
 
 

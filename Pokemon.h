@@ -25,8 +25,6 @@ public:
 
     Pokemon(const Pokemon &base);
 
-    ~Pokemon();
-
     std::string getName();
     int getId();
 

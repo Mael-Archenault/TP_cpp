@@ -24,11 +24,6 @@ Pokedex::Pokedex(const std::string& nomFichier) : PokemonVector()
 
 }
 
-Pokedex::~Pokedex()
-{
-
-}
-
 Pokedex* Pokedex::instance{nullptr};
 Pokedex* Pokedex::getInstance(const std::string& nomFichier)
 {
@@ -48,11 +43,11 @@ Pokedex* Pokedex::getInstance(const std::string& nomFichier)
 
 Pokemon Pokedex::getCloneById(int id)
 {
-    return Pokemon(getCloneById(id));
-}
+    return Pokemon(getById(id));
+};
 
 Pokemon Pokedex::getCloneByName(const std::string name)
 {
-    return Pokemon(getCloneByName(name));
-}
+    return Pokemon(getByName(name));
+};
 

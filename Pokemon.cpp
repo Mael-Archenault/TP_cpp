@@ -34,10 +34,6 @@ Pokemon::Pokemon(const Pokemon &base):
         attack(base.attack),
         defense(base.defense){};
 
-Pokemon::~Pokemon()
-            {
-            };
-
 std::string Pokemon::getName()
 {
     return this->name;

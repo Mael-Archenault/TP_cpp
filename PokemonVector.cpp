@@ -13,12 +13,6 @@ PokemonVector::PokemonVector()
     std::vector<Pokemon> pokemons;
 }
 
-PokemonVector::~PokemonVector()
-{
-}
-
-
-
 
 Pokemon PokemonVector::getById(int id)
 {
