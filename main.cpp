@@ -1,25 +1,24 @@
 
 
+#include "Pokedex.h"
 
-/*#include "Pokemon.hpp"
 
 
 int main(){
-    Pokemon bulbizarre(0,"Bulbizarre", 10,4,1,1);
-    Pokemon pikachu(0,"Pikachu", 10,2,0,1);
+    Pokedex* test = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
+    Pokedex* test2 = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
+    std::cout<<(test == test2)<<std::endl;
 
 
 
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-    bulbizarre.attackOther(pikachu);
-}*/
+}
 
 
+
+
+// Test SFML
+
+/*
 #include <SFML/Graphics.hpp>
 int main()
 {
@@ -37,4 +36,4 @@ int main()
         window.display();
     }
     return 0;
-}
+}*/
