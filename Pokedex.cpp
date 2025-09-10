@@ -45,3 +45,14 @@ Pokedex* Pokedex::getInstance(const std::string& nomFichier)
     return instance;
 }
 
+
+Pokemon Pokedex::getCloneById(int id)
+{
+    return Pokemon(getCloneById(id));
+}
+
+Pokemon Pokedex::getCloneByName(const std::string name)
+{
+    return Pokemon(getCloneByName(name));
+}
+

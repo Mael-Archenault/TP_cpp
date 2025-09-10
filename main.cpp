@@ -9,7 +9,7 @@ int main(){
     Pokedex* test2 = Pokedex::getInstance("/home/mael-archenault/Desktop/TP_cpp/pokedex.csv");
     std::cout<<(test == test2)<<std::endl;
 
-
+    test->displayByName();
 
 }
 

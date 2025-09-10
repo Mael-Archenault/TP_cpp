@@ -50,7 +50,7 @@ int Pokemon::getId()
 
 void Pokemon::display()
 {
-    std::cout<<"|"<<this->id<<"|"<<this->name<<std::endl;
+    std::cout<<"|"<<this->id<<"|"<<this->name<<"|"<<std::endl;
 }
 
 
