@@ -7,4 +7,3 @@
 
 ## Points à améliorer
 - CMakeLists.txt non mis à jour, j'ai reçu beaucoup d'erreurs alors que tout était super. 
-
