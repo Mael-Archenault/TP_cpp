@@ -56,6 +56,14 @@ int Pokemon::getId()
     return this->id;
 }
 
+double Pokemon::heal(double amount)
+{
+    if (amount <= 0.0) return 0.0;
+    double before = this->HP;
+    this->HP = std::min(this->maxHP, this->HP + amount);
+    return this->HP - before;
+}
+
 void Pokemon::display()
 {
     std::cout<<"|"<<this->id<<"|"<<this->name<<"|"<<this->evolution<<"|"<<this->maxHP<<"|"<<this->HP<<"|"<<this->attack<<"|"<<this->defense<<"|"<<std::endl;

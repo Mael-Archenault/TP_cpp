@@ -14,6 +14,7 @@ private:
     double HP{};
     double attack{};
     double defense{};
+    double heal(double amount);
 
 public:
 
