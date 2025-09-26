@@ -1,19 +1,19 @@
-#ifndef TP_CPP_POKEMONATTACK_H
-#define TP_CPP_POKEMONATTACK_H
+    #ifndef TP_CPP_POKEMONATTACK_H
+    #define TP_CPP_POKEMONATTACK_H
 
-#include "PokemonParty.h"
+    #include "PokemonParty.h"
+    #include "Pokemon.h"
 
-class PokemonAttack : public PokemonVector
-{
-
-private:
-
-
-public:
-    PokemonAttack();
-    void addPokemon(Pokemon pokemon);
-    void display();
-};
+    class PokemonAttack : public PokemonVector
+    {
 
 
-#endif //TP_CPP_POKEMONATTACK_H
+    public:
+        PokemonAttack();
+        void addPokemon(Pokemon& pokemon);
+        Pokemon& getPokemon(int index);
+        void display();
+    };
+
+
+    #endif //TP_CPP_POKEMONATTACK_H

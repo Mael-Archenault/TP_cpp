@@ -18,8 +18,8 @@ public:
     Pokemon getById(int id);
     Pokemon getByName(std::string name);
 
-    void addPokemon(Pokemon pokemon);
-    Pokemon removePokemon(int index);
+    void addPokemon(Pokemon& pokemon);
+    Pokemon& removePokemon(int index);
 
 
     void displayById();

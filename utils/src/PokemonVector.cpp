@@ -13,15 +13,15 @@ PokemonVector::PokemonVector()
     std::vector<Pokemon> pokemons;
 }
 
-void PokemonVector::addPokemon(Pokemon pokemon)
+void PokemonVector::addPokemon(Pokemon& pokemon)
 {
     this->pokemons.push_back(pokemon);
 }
 
 
-Pokemon PokemonVector::removePokemon(int index)
+Pokemon& PokemonVector::removePokemon(int index)
 {
-    Pokemon result = this->pokemons.at(index);
+    Pokemon result = pokemons.at(index);
     this->pokemons.erase(this->pokemons.begin() + index);
     return result;
 }

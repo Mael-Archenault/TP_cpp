@@ -13,7 +13,7 @@ PokemonAttack::PokemonAttack()
 
 
 
-void PokemonAttack::addPokemon(Pokemon pokemon)
+void PokemonAttack::addPokemon(Pokemon& pokemon)
 {
     if (pokemons.size() == 6)
     {
@@ -21,6 +21,10 @@ void PokemonAttack::addPokemon(Pokemon pokemon)
         return;
     }
     pokemons.push_back(pokemon);
+}
+
+Pokemon& PokemonAttack::getPokemon(int index){
+    return pokemons.at(index);
 }
 
 

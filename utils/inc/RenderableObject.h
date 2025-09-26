@@ -12,9 +12,9 @@ class RenderableObject
 {
 
 protected:
-    sf::Texture texture;
-    sf::Sprite sprite;
+sf::Sprite sprite;
 public:
+    sf::Texture* texture;
     RenderableObject(){};
     void render(sf::RenderWindow& window, sf::Vector2f position);
 

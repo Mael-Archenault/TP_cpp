@@ -5,7 +5,10 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(${CMAKE_SOURCE_DIR}/utils/inc)
 
 
-file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/utils/src/*.cpp)
+file(GLOB_RECURSE SRC_FILES
+    ${CMAKE_SOURCE_DIR}/utils/src/*.cpp
+)
+
 add_executable(TP_cpp main.cpp ${SRC_FILES})
 
 

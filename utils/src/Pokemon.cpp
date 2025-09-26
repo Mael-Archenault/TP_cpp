@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Pokemon.h"
-
+#include "TextureManager.h"
 
 
 #include "csv.h"
@@ -25,10 +25,12 @@ Pokemon::Pokemon(int id,
         defense(defense)
 {
 
-    // Initializing rendering parameters (from RenderableObject Class)
-    //std::string image_path = "/home/mael-archenault/Desktop/TP_cpp/sources/sprites/"+std::to_string(id)+".png";
-    //texture.loadFromFile(image_path);
-    //sprite.setTexture(texture);
+    //Initializing rendering parameters (from RenderableObject Class)
+    std::string image_path = "../sources/sprites/"+std::to_string(id)+".png";
+    texture = TextureManager::getInstance().loadTexture(image_path);
+    if (texture) {
+        sprite.setTexture(*texture);
+    }
 };
 
 
@@ -42,8 +44,8 @@ Pokemon::Pokemon(const Pokemon &base):
         attack(base.attack),
         defense(base.defense)
 {
-    //texture = sf::Texture(base.texture);
-    //sprite = sf::Sprite(base.sprite);
+    texture = base.texture;
+    sprite = base.sprite;
 };
 
 std::string Pokemon::getName()
