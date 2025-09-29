@@ -16,6 +16,10 @@ sf::Sprite sprite;
 public:
     sf::Texture* texture;
     RenderableObject(){};
+    void scale(float scaleX, float scaleY);
+    void reverseX();
+    int getWidth();
+    int getHeight();
     void render(sf::RenderWindow& window, sf::Vector2f position);
 
 };

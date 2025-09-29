@@ -23,9 +23,6 @@ void PokemonAttack::addPokemon(Pokemon& pokemon)
     pokemons.push_back(pokemon);
 }
 
-Pokemon& PokemonAttack::getPokemon(int index){
-    return pokemons.at(index);
-}
 
 
 void PokemonAttack::display()

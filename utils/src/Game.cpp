@@ -3,13 +3,16 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Trainer.h"
+#include "Pokedex.h"
 
 
 Game::Game(GameState* initialState){
     state = initialState;
     state->setReferenceToContext(this);
 
-    window.create(sf::VideoMode(800, 600), "Game Window");
+    windowWidth = 800;
+    windowHeight = 600;
+    window.create(sf::VideoMode(windowWidth, windowHeight), "Game Window");
 
 
     player = new Trainer(1, "Nate", "../sources/player_sprite.png", sf::Vector2f(400, 300));
@@ -18,7 +21,10 @@ Game::Game(GameState* initialState){
     } else {
         std::cout << "Player Trainer instance created successfully" << std::endl;
     }
+    pokedex = Pokedex::getInstance("../sources/pokedex.csv");
+    pokedex->displayById();
     
+
 }
 
 
@@ -52,4 +58,17 @@ void Game::run(){
         state->render(window);
         window.display();
     }
+}
+
+
+int Game::getWindowWidth(){
+    return windowWidth;
+}
+
+int Game::getWindowHeight(){
+    return windowHeight;
+}
+
+Pokedex* Game::getPokedex(){
+    return pokedex;
 }

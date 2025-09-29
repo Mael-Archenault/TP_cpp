@@ -14,18 +14,21 @@ Trainer::Trainer(int id, const std::string& name, const std::string& textureFile
     sprite.setScale((float)scale, (float)scale); // Make the sprite twice as large
     speed = 5;
 
+
+
+    // Initializing the team with 1 pokemon
     Pokemon first_pokemon = Pokemon(1, "Bulbasaur", 0, 100,100,100,100);
+    Pokemon second_pokemon = Pokemon(4, "Charmander", 0, 100,100,100,100);
+    Pokemon third_pokemon = Pokemon(7, "Squirtle", 0, 100,100,100,100);
+    Pokemon fourth_pokemon = Pokemon(10, "Pidgey", 0, 100,100,100,100);
+    Pokemon fifth_pokemon = Pokemon(25, "Pikachu", 0, 100,100,100,100);
+    Pokemon sixth_pokemon = Pokemon(39, "Jigglypuff", 0, 100,100,100,100);
+    attackTeam.addPokemon(third_pokemon);
+    attackTeam.addPokemon(second_pokemon);
     attackTeam.addPokemon(first_pokemon);
-
-    sf::Vector2u size = first_pokemon.texture->getSize();
-    if (size.x == 0 || size.y == 0) {
-        std::cerr << "Texture has invalid size!" << std::endl;
-    } else {
-        std::cout << "Texture size: " << size.x << "x" << size.y << std::endl;
-    }
-
-    std::cout<<&first_pokemon<<std::endl;
-   attackTeam.display();
+    // attackTeam.addPokemon(fourth_pokemon);
+    // attackTeam.addPokemon(fifth_pokemon);
+    // attackTeam.addPokemon(sixth_pokemon);
 
 }
 

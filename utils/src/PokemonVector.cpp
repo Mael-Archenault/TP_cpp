@@ -86,3 +86,12 @@ bool PokemonVector::compareId(Pokemon& pokemon1, Pokemon& pokemon2)
 {
     return pokemon1.getId() < pokemon2.getId();
 }
+
+
+int PokemonVector::size(){
+    return this->pokemons.size();
+}
+
+Pokemon& PokemonVector::at(int index){
+    return this->pokemons.at(index);
+}

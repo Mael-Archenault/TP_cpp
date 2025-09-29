@@ -11,7 +11,6 @@
     public:
         PokemonAttack();
         void addPokemon(Pokemon& pokemon);
-        Pokemon& getPokemon(int index);
         void display();
     };
 

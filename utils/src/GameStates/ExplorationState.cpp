@@ -23,7 +23,7 @@ void ExplorationState::handleInput(){
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::B)) {
         std::cout << "Switching to Party State" << std::endl;
-        this->context->setState(new PartyState());
+        this->context->setState(new PartyState(this->context, player->getAttackTeam()));
     }
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
@@ -48,7 +48,7 @@ void ExplorationState::update(float deltaTime){
 
     if (player->getPosition().x <= 20-(int)(player->getSpriteWidth()/2)){
         std::cout << "Switching to Fight State" << std::endl;
-        this->context->setState(new FightState());
+        this->context->setState(new FightState(context,player));
     }
     else if (player->getPosition().x >= 780 - (int)(player->getSpriteWidth()/2)){
         std::cout << "Switching to Arena State" << std::endl;

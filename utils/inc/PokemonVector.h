@@ -21,6 +21,9 @@ public:
     void addPokemon(Pokemon& pokemon);
     Pokemon& removePokemon(int index);
 
+    int size();
+    Pokemon& at(int index);
+
 
     void displayById();
     void displayByName();
