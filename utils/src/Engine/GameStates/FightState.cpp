@@ -61,7 +61,6 @@ FightState::FightState(Game* context,Trainer* player)
 
 void FightState::update(float deltaTime)
 {
-    // Update fight logic here
 }
 
 void FightState::render(sf::RenderWindow& window)
